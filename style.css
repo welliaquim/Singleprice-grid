@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+}
+
+.attribution {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-210%);
+}
+
+.topcard, .rightcard {
+    display: grid;
+    padding: 2rem 3rem 2rem 2rem;
+}
+
+.content {
+    display: grid;
+    width: 650px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.topcard {
+    display: grid;
+    grid-column-start:1;
+    grid-column-end: 3;
+    background: rgb(255,255,255);
+    gap: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.topcard h2 {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+}
+
+.topcard h4 {
+    color: hsl(71, 73%, 54%);
+}
+
+.topcard p {
+    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+}
+
+.othertext {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.leftcard {
+    display: grid;
+    background-color: hsla(179, 62%, 43%, 1);
+    padding: 2rem 3.3rem 2rem 2rem;
+    gap: 0.4rem;
+}
+
+.leftcard h4 {
+    color: rgba(255,255,255,1);
+    padding-bottom: 0.5rem;
+}
+
+.eltexto {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+span:first-of-type {
+    font-size: 2rem;
+    color: rgb(255,255,255);
+}
+
+span:nth-of-type(2) {
+    color: rgba(255,255,255,0.5);
+}
+
+.leftcard p {
+    padding-bottom: 1.3rem;
+}
+
+p {
+    color: rgba(255,255,255,0.7);
+    font-weight: 400;
+}
+
+button {
+    background: hsla(71, 73%, 54%, 1);
+    color: rgba(255,255,255,1);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 1px 6px 15px -5px rgba(0,0,0,0.75);
+}
+
+.rightcard {
+    display: grid;
+    background: hsla(179, 62%, 43%, 0.7);
+    gap: 1.2rem;
+}
+
+.rightcard h4 {
+    color: rgba(255,255,255,1);
+    font-weight: 700;
+}
+
+li {
+    list-style-type: none;
+    color: rgba(255,255,255,0.7);
+    font-weight: 400;
+    line-height: 1.3rem;
+}
+
+@media screen and (max-width: 649px) {
+    body {
+        height: fit-content;
+        padding: 2rem 1rem;
+    }
+    .content {
+        width: 330px;
+        grid-template-columns: 1fr;
+    }
+    .topcard, .leftcard {
+        padding: 1.5rem;
+    }
+
+    .topcard p {
+        font-size: 0.8rem;
+    }
+    button {
+        padding: 0.3rem;
+    }
+
+    .leftcard p {
+        padding-bottom: 0.5rem;
+    }
+    .rightcard {
+        grid-row-start: 3;
+        padding: 1.5rem 5.4rem 1.5rem 1.5rem;
+    }
+    li {
+        font-size: 0.8rem;
+    }
+}
